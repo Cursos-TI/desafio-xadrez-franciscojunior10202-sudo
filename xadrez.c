@@ -13,6 +13,8 @@ int main() {
     int casasTorre = 5;  // número de casas que a Torre vai andar
     int casasBispo = 5;  // número de casas que o Bispo vai andar
     int casasRainha = 8; // número de casas que a Rainha vai andar
+    int movimentosBaixo = 2;     // Quantidade de passos para baixo
+    int movimentosEsquerda = 1;  // Quantidade de passos para esquerda
 
     // -------------------------------
     // Torre - usando FOR
@@ -44,6 +46,27 @@ int main() {
         printf("Esquerda (%d)\n", i);
         i++;
     } while (i <= casasRainha);
+
+    printf("\n=== Movimento do Cavalo ===\n\n");
+
+    // Loop Externo
+    for (int x = 1; x <= movimentosBaixo; x++) {
+        printf("Baixo (%d)\n", x);
+
+        // Loop interno WHILE -> exemplo de loop aninhado
+        int j = 1;
+        while (j < 1) {  // aqui não roda, mas mostra a estrutura de loop dentro do FOR
+            printf(" (loop interno dentro do for)\n");
+            j++;
+        }
+    }
+
+     // Depois de 2 para baixo, o cavalo vai 1 para a esquerda
+    int k = 1;
+    do {
+        printf("Esquerda (%d)\n", k);
+        k++;
+    } while (k <= movimentosEsquerda);
 
     printf("\n=== Fim da Simulacao ===\n");
 
